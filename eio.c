@@ -37,8 +37,17 @@
  * either the BSD or the GPL.
  */
 
-#ifndef _WIN32
-# include "config.h"
+/**
+ * For a easy way to adopt 
+ * gyp build script, comment out 
+ * config definition
+ */
+// #ifndef _WIN32
+// # include "config.h"
+// #endif
+
+#ifdef EIO_CONFIG_H
+# include EIO_CONFIG_H
 #endif
 
 #include "eio.h"
