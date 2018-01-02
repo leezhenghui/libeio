@@ -38,16 +38,16 @@
  */
 
 /**
- * For a easy way to adopt 
- * gyp build script, comment out 
- * config definition
- */
-// #ifndef _WIN32
-// # include "config.h"
-// #endif
-
+ * For a quick way to adopt 
+ * gyp build script, specify
+ * config.h via a definition
+ * */
 #ifdef EIO_CONFIG_H
 # include EIO_CONFIG_H
+#else
+# ifndef _WIN32
+#   include "config.h"
+# endif
 #endif
 
 #include "eio.h"
